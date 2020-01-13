@@ -12,11 +12,7 @@ function preload(){
       "/images/pineapple.png",
     ];
 
-    //pick a random fruit image
-  	var pos = floor(random(possibleFruits.length));
-    //
-  	//load the picked image
-  	// fruit = loadImage(possibleFruits[pos]);
+
 
 }
 
@@ -26,7 +22,7 @@ function setup() {
 
 function draw() {
   background('white');
-  image(fruit, windowWidth/2.6, windowHeight/6,300,300);
+
 
   push();
   var myText = "Shake to find out what fruit you are";
@@ -38,9 +34,15 @@ function draw() {
 
 
 function deviceShaken() {
+  image(fruit, windowWidth/2.6, windowHeight/6,300,300);
+  //pick a random fruit image
+  var pos = floor(random(possibleFruits.length));
+
+  //load the picked image
   fruit = loadImage(possibleFruits[pos]);
+
 }
 
 function touchEnded() {
-    DeviceOrientationEvent.requestPermission()
+    DeviceOrientationEvent.requestPermission();
 }
