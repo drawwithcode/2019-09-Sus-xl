@@ -1,10 +1,6 @@
 var possibleFruits;
 var fruit;
 
-var heart;
-
-
-
 
 function preload(){
 	//create an array of fruit image file names
@@ -14,24 +10,15 @@ function preload(){
       "/images/apple.png",
       "/images/dragonfruit.png",
       "/images/pineapple.png",
-
     ];
 
     //pick a random fruit image
   	var pos = floor(random(possibleFruits.length));
-
+    //
   	//load the picked image
-  	fruit = loadImage(possibleFruits[pos]);
-
-  	//load the heart image
-	   heart = loadImage("/images/fruits.jpg");
+  	// fruit = loadImage(possibleFruits[pos]);
 
 }
-
-function deviceShaken() {
-  fruit = random(possibleFruits[pos]);
-}
-
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -47,5 +34,13 @@ function draw() {
   fill('black');
   text(myText, width / 2.3, 50);
   pop();
+}
 
+
+function deviceShaken() {
+  fruit = loadImage(possibleFruits[pos]);
+}
+
+function touchEnded() {
+    DeviceOrientationEvent.requestPermission()
 }
