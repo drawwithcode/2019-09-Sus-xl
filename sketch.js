@@ -20,8 +20,8 @@ function preload(){
     //pick a random fruit image
   	var pos = floor(random(possibleFruits.length));
 
-  	// //load the picked image
-  	// fruit = loadImage(possibleFruits[pos]);
+  	//load the picked image
+  	fruit = loadImage(possibleFruits[pos]);
 
   	//load the heart image
 	   heart = loadImage("/images/fruits.jpg");
@@ -34,9 +34,7 @@ function setup() {
 
 function draw() {
   background(204);
-
-  // image(fruit, 0, 0);
-  // image(heart, random(-10, 10), random(-4, 4), width, height);
+  image(fruit, windowWidth/4, windowHeight/6,300,300);
 
 
 }
