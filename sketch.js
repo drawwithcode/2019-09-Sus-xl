@@ -1,10 +1,6 @@
 var possibleFruits;
 var fruit;
 
-var heart;
-
-
-
 
 function preload(){
 	//create an array of fruit image file names
@@ -14,17 +10,9 @@ function preload(){
       "/images/apple.png",
       "/images/dragonfruit.png",
       "/images/pineapple.png",
-
     ];
 
-    //pick a random fruit image
-  	var pos = floor(random(possibleFruits.length));
 
-  	// //load the picked image
-  	// fruit = loadImage(possibleFruits[pos]);
-
-  	//load the heart image
-	   heart = loadImage("/images/fruits.jpg");
 
 }
 
@@ -33,18 +21,28 @@ function setup() {
 }
 
 function draw() {
-  background(204);
-
-  // image(fruit, 0, 0);
-  // image(heart, random(-10, 10), random(-4, 4), width, height);
+  background('white');
 
 
+  push();
+  var myText = "Shake to find out what fruit you are";
+  drawingContext.font = "60px";
+  fill('black');
+  text(myText, width / 2.3, 50);
+  pop();
 }
 
 
-
-
-// --Every time we shake the device, an answer is given
 function deviceShaken() {
-  fruit = random(possibleFruits);
+  image(fruit, windowWidth/2.6, windowHeight/6,300,300);
+  //pick a random fruit image
+  var pos = floor(random(possibleFruits.length));
+
+  //load the picked image
+  fruit = loadImage(possibleFruits[pos]);
+
+}
+
+function touchEnded() {
+    DeviceOrientationEvent.requestPermission();
 }
