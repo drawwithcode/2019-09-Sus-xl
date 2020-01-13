@@ -28,21 +28,24 @@ function preload(){
 
 }
 
+function deviceShaken() {
+  fruit = random(possibleFruits[pos]);
+}
+
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
-  background(204);
-  image(fruit, windowWidth/4, windowHeight/6,300,300);
+  background('white');
+  image(fruit, windowWidth/2.6, windowHeight/6,300,300);
 
+  push();
+  var myText = "Shake to find out what fruit you are";
+  drawingContext.font = "60px";
+  fill('black');
+  text(myText, width / 2.3, 50);
+  pop();
 
-}
-
-
-
-
-// --Every time we shake the device, an answer is given
-function deviceShaken() {
-  fruit = random(possibleFruits);
 }
