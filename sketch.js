@@ -28,7 +28,7 @@ function draw() {
   background('white');
 
   push();
-  var myText = "Shake to find out what fruit you are";
+  var myText = "Shake to find out what fruit you are. Wait for a bit, the image takes a while to load. sorry";
   drawingContext.font = "60px";
   fill('black');
   text(myText, width / 2.3, 50);
