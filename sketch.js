@@ -5,11 +5,11 @@ var fruit;
 function preload(){
 	//create an array of fruit image file names
 	possibleFruits = [
-		  "/images/banana.png",
-      "/images/orange.png",
-      "/images/apple.png",
-      "/images/dragonfruit.png",
-      "/images/pineapple.png",
+		  "./images/banana.png",
+      "./images/orange.png",
+      "./images/apple.png",
+      "./images/dragonfruit.png",
+      "./images/pineapple.png",
     ];
 
 
