@@ -18,6 +18,10 @@ function preload(){
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+	//pick a random fruit image
+	var pos = floor(random(possibleFruits.length));
+	//load the picked image
+	fruit = loadImage(possibleFruits[pos]);
 }
 
 function draw() {
@@ -31,6 +35,7 @@ function draw() {
   pop();
 
   image(fruit, windowWidth/2.6, windowHeight/6,300,300);
+
 }
 
 
