@@ -8,8 +8,8 @@ function preload(){
 		  "./images/banana.png",
       "./images/orange.png",
       "./images/apple.png",
-      "/images/dragonfruit.png",
-      "/images/pineapple.png",
+      "./images/dragonfruit.png",
+      "./images/pineapple.png",
     ];
 
 
@@ -33,13 +33,6 @@ function draw() {
   fill('black');
   text(myText, 10, 50);
   pop();
-
-	push();
-	var myText = "Also, it stopped working when uploaded to github.";
-	drawingContext.font = "60px";
-	fill('black');
-	text(myText, 10, 50);
-	pop();
 
   image(fruit, windowWidth/2.6, windowHeight/6,300,300);
 
