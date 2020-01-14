@@ -31,7 +31,7 @@ function draw() {
   var myText = "Shake to find out what fruit you are. Wait for a bit, the image takes a while to load. sorry";
   drawingContext.font = "60px";
   fill('black');
-  text(myText, width / 2.3, 50);
+  text(myText, 10, 50);
   pop();
 
   image(fruit, windowWidth/2.6, windowHeight/6,300,300);
